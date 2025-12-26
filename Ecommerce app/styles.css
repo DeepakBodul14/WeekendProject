@@ -1,0 +1,179 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f12; 
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px; /* Slightly wider for the dropdowns */
+    padding: 30px;
+    background-color: #1a1a1d;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2e2e33;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #bb86fc;
+}
+
+h2 {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* Category Layout */
+.category-section {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.category-section h3 {
+    font-size: 0.9rem;
+    color: #9a9a9a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.product-controls {
+    display: flex;
+    gap: 10px;
+    background-color: #252529;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: border-color 0.3s;
+}
+
+.product-controls:focus-within {
+    border-color: #6200ea;
+}
+
+/* Dropdown (Select) Styling */
+select {
+    flex: 1;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+select option {
+    background-color: #1a1a1d;
+    color: #fff;
+}
+
+/* Buttons */
+button {
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border: none;
+    color: #fff;
+}
+
+/* Add Button */
+.add-btn {
+    background-color: #6200ea;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.add-btn:hover {
+    background-color: #7c4dff;
+    transform: translateY(-1px);
+}
+
+/* Cart Item List */
+.cart-item {
+    background-color: #252529;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Remove Button */
+.remove-btn {
+    background-color: #cf6679;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+}
+
+.remove-btn:hover {
+    background-color: #ff4d4d;
+}
+
+/* Total Section */
+#cart-total {
+    text-align: right;
+    padding: 15px;
+    background: #252529;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 1px dashed #444;
+}
+
+#total-price {
+    font-weight: bold;
+    color: #03dac6; /* Teal for INR Price */
+    font-size: 1.2rem;
+}
+
+#checkout-btn {
+    background: linear-gradient(135deg, #6200ea, #3700b3);
+    padding: 14px;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+#checkout-btn:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 5px 15px rgba(98, 0, 234, 0.4);
+}
+
+.hidden {
+    display: none;
+}
+
+#empty-cart {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 20px 0;
+}
